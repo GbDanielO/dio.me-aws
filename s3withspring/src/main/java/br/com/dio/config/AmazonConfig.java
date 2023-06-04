@@ -13,15 +13,17 @@ import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 public class AmazonConfig {
 	
 	private static final String ACCESS_KEY = "accesskey";
-	private static final String SECRET_KEY = "secrete";
+	private static final String SECRET_KEY = "secretkey";
 
+	public static final String BUCKET_NAME = "curso-aws-dio-e-alura";
+	
 	@Bean
-	public AmazonS3 amazonConfig() {
+	public AmazonS3 getAmazonConfig() {
 		
 		BasicAWSCredentials basicAWSCredentials = new BasicAWSCredentials(ACCESS_KEY, SECRET_KEY);
 		return AmazonS3ClientBuilder
 				.standard()
-				.withRegion(Regions.DEFAULT_REGION)
+				.withRegion(Regions.SA_EAST_1)
 				.withCredentials(new AWSStaticCredentialsProvider(basicAWSCredentials))
 				.build();
 		
