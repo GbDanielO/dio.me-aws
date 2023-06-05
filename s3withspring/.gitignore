@@ -1,5 +1,6 @@
 #Projeto
 br/com/dio/config/AmazonConfig.java
+s3withspring/src/main/java/br/com/dio/config/AmazonConfig.java
 
 HELP.md
 target/
